@@ -27,13 +27,13 @@ This sub-library is a set of OSI compliant traffic participant models, which inc
 
 Initiated: Call for participation. Get engaged mailto:hello@envited.market[hello@envited.market]
 
-#### Maintainer
+### Maintainer
 
 - TBD
 - TBD
 - TBD
   
-#### Repositories
+### Repositories
 
 - https://github.com/openMSL/sl-2-0-traffic-participant-model-repository-template[sl-2-0-traffic-participant-model-repository-template]
 

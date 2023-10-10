@@ -1,6 +1,6 @@
 = List of Abbreviations
 
-[cols="1,1,1"]
+[cols="1,2,2"]
 |===
 |Abbreviation | Meaning | Short Description
 

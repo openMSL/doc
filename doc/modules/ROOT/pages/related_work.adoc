@@ -42,4 +42,4 @@ OSMP is used as a template to package all models using OSI and FMI.
 
 ## Webinars
 
-NOTE: Put webinars here?
+NOTE: Will be updated shortly

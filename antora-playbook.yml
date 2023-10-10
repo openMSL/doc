@@ -14,3 +14,7 @@ ui:
     #url: https://code.asam.net/common/antora-ui/-/jobs/artifacts/main/raw/build/ui-bundle.zip?job=bundle-stable
     snapshot: false
   supplemental_files: ./supplemental_ui
+antora:
+  extensions:
+  - '@antora/lunr-extension'
+  

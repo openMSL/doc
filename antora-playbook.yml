@@ -1,10 +1,10 @@
 site:
   title: OpenMSL
-  url: https://persival-gmbh.github.io/asciidoc-test
+  url: https://openmsl.github.io/doc/
   start_page: OpenMSL::index.adoc 
 content:
   sources: 
-  - url: https://github.com/Persival-GmbH/asciidoc-test.git
+  - url: https://github.com/openMSL/doc.git
     branches: HEAD
     edit_url: false
     start_path: doc

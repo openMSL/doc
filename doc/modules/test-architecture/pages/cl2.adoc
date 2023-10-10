@@ -1,0 +1,86 @@
+# CL 2: Qualitative Verification
+
+For credibility assessment level 2, the model is build and applied in a co-simulation.
+https://github.com/eclipse/openmcx[OpenMCx] is used as a co-simulation platform.
+There are two possibilities for generating the input for the model.
+
+1. The model input is provided by an OSI trace file.
+   This trace file is read by an https://gitlab.com/persival-open-source/open-simulation-interface/osi-trace-file-player[OSI trace file player FMU] which is connected to the model FMU.
+   The connection interface is OSI with data according to the https://opensimulationinterface.github.io/osi-antora-generator/asamosi/latest/sensor-model/spec/model_types.html[model type].
+   In case of a sensor model, the connection interface is osi3::SensorView.
+   For other models it can be osi3::SensorData, osi3::TrafficCommand etc.
+   The co-simulation setup of this approach is depicted in the first image below.
+2. The model input is provided by a scenario engine.
+   The OpenScenario player https://github.com/esmini/esmini[esmini] is used to play an OpenScenario file within an OSMP FMU and output osi3::SensorView data for the model.
+   The co-simulation setup of this approach is depicted in the second image below.
+   In a future adaptation, the esmini FMU will be enabled to receive osi3::TrafficCommand data to test further model types.
+
+[.float-group]
+--
+[.left]
+.Tracefile test setup for CL 2
+[#img-cl2_test_tracefile,link=_images/cl2_test_tracefile.svg]
+image::cl2_test_tracefile.svg[Tracefile test setup for CL 2,350]
+
+[.right]
+.Esmini test setup for CL 2
+[#img-cl2_test_esmini,link=_images/cl2_test_esmini.svg]
+image::cl2_test_esmini.svg[Esmini test setup for CL 2,350]
+--
+
+The output of the model can be used in three different ways:
+
+1. It can be disregarded, just to test if the model runs at all. This is referred to as a smoke test. An example can be found https://github.com/openMSL/sl-1-0-sensor-model-repository-template/tree/main/test/integration/001_smoke_test_tracefile[here].
+2. It can be connected to a processing FMU evaluating the model output. This way, the model output is tested "on-the-fly" step by step during the co-simulation. This can for example be an interface test, e.g. https://github.com/openMSL/sl-1-0-sensor-model-repository-template/tree/main/test/integration/003_output_osi_fields[here].
+3. A https://github.com/Persival-GmbH/osi-sensordata-trace-file-writer[trace file writer] can be used as a processing FMU to generate a trace file from the model output during the co-simulation.
+This trace file will be supplied as a GitHub Action Artifact, so it can be downloaded for offline analysis.
+But the trace file can also be directly analyzed in the pipeline by a python script.
+This functionality is part of CL3.
+
+All tests in CL 2 are considered integration tests, since they all require a co-simulation with at least one other FMU.
+Therefore, every test is located in an individual folder in _test/integration_.
+The individual test folder SHALL follow the naming scheme "xxx_short_description", where xxx is a three digit consecutive number.
+The folder SHALL contain a https://ssp-standard.org/publications/SSP10RC1/SystemStructureAndParameterization10RC1.pdf[system structure definition file (.ssd)].
+In this file, the utilized model input (trace file player or esmini) as well as the processing FMU (evaluation or trace file writer) are specified.
+The test folder SHALL additionally contain a README.md file, which describes the test system, scenario and pass/fail criterion.
+A https://github.com/openMSL/.github/blob/main/doc/integration_test_readme_template.md[template] is provided with the corresponding sections for this readme file.
+Other simulation artefacts such as the trace file or scenario to be played as well as auxiliary files for the evaluation FMU and a python analysis script are also to be placed in that test folder.
+Example implementations in the _test/integration_ folder can be found in the https://github.com/openMSL/sl-1-0-sensor-model-repository-template/tree/main/test/integration/[sensor model template repository].
+
+An implementation of the GitHub action for this credibility assessment level can also be found in the https://github.com/openMSL/sl-1-0-sensor-model-repository-template/tree/main/.github/workflows/cl2.yml[sensor model template repository].
+
+The three different test methods are described in more detail in the following sections.
+
+## CL 2.1 Smoke Tests
+
+Typically in software testing, smoke test are done by just running the system under test stand-alone.
+But since OSMP models always require a model input, smoke test are also located in the integration test folder.
+For the smoke tests, the model is employed in a co-simulation and fed with inputs.
+The model is just connected either to a trace file player or a scenario engine to generate the model input.
+The output of the model is not used.
+The model SHALL go through the tests without any run time errors.
+
+An example implementation of this test can be found in the https://github.com/openMSL/sl-1-0-sensor-model-repository-template/tree/main/test/integration/001_smoke_test[sensor model template repository].
+
+## CL 2.2 Interface Tests
+
+In this test category, in addition to a trace file player or scenario engine, the model output is connected to an evaluation FMU.
+With this setup, the model output is tested against various criteria.
+
+### OSI Field Check
+
+In this test, the model output is connected to the https://github.com/openMSL/sl-1-5-sensor-model-testing/tree/main/src/osi-field-checker[OSI Field Checker] FMU provided in this repository.
+It checks, if the OSI fields required for the model under test are filled in the model output.
+The required output fields are specified in a txt file, where every line is one OSI field.
+If a field is missing in the output, it will be shown as an annotation in the GitHub action.
+More detailed information about the OSI Field Checker can be found in the respective https://github.com/openMSL/sl-1-5-sensor-model-testing/tree/main/src/osi-field-checker#readme[Readme].
+
+An example implementation of this test can be found in the https://github.com/openMSL/sl-1-0-sensor-model-repository-template/tree/main/test/integration/002_output_osi_fields[sensor model template repository].
+
+### Value Range Check
+
+(not yet implemented) +
+Furthermore, the value ranges of the output parameters are tested.
+E.g. if a lidar sensor has intensity outputs in the interval [0, 100], the sensor model SHALL NOT output any values outside of this range.
+These tests on value ranges might also include the timing of the model.
+Additional test can be performed on the SensorViewConfigRequest during the initialization of the model FMU, if implemented.

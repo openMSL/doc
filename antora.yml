@@ -1,0 +1,5 @@
+# Component name (without spaces!). All content repositories with the same component name are merged in Antora.
+name: OpenMSL
+version:
+  # Update version number accordingly. This is the version for the main branch
+  main: ''

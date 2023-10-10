@@ -1,0 +1,45 @@
+# Related Work
+
+## Standards
+
+https://www.asam.net/standards/detail/opendrive/[ASAM OpenDrive]:
+Road networks are specified in the OpenDrive format.
+It is used to test simulation models in a co-simulation directly in the GitHub CI pipeline.
+
+https://www.asam.net/standards/detail/openscenario/[ASAM OpenScenario]:
+How objects move in a scene is described in the OpenScenario format.
+It is used to test simulation models in a co-simulation directly in the GitHub CI pipeline.
+
+https://github.com/OpenSimulationInterface/open-simulation-interface[ASAM OpenSimulationInterface]:
+All simulation models on OpenMSL use OSI as the standard interface for model input and model output.
+
+https://fmi-standard.org/[Modelica FMI]:
+All models on OpenMSL are packaged as an FMU, compliant with the FMI standard.
+This enables co-simulation of multiple models from different suppliers.
+
+https://github.com/PMSFIT/SSPTraceability[SSP Traceability]:
+To specify a system for co-simulation, the SSP standard is used.
+This XML standard defines, which FMUs belong to a certain system and how they are connected in a so-called System Structure Definition (SSD).
+Also, parameters can be assigned to the different FMUs.
+
+## Other Projects
+
+https://github.com/esmini/esmini[esmini]:
+For co-simulation of OpenMSL models directly in the GitHub CI pipeline, esmini is used to play OpenScenario files as input for the models.
+
+https://github.com/CATIA-Systems/FMPy[FMPy]:
+To check, if an FMU build by the GitHub pipeline is conforming to the FMI standard, FMPy validate is used.
+
+https://github.com/modelica-tools/FMUComplianceChecker[FMU Compliance Checker]:
+Alongside the aforementioned FMPy, the official FMU Compliance Checker by Modelica is also used to ensure that all FMUs comply with the FMI standard.
+
+https://github.com/eclipse/openmcx[OpenMCx]:
+Simulations with multiple models packaged as FMUs need a co-simulation master.
+To test models in the GitHub CI pipeline, OpenMCx is used to connect multiple FMUs according to a System Structure Definition (SSD).
+
+https://github.com/OpenSimulationInterface/osi-sensor-model-packaging[OSI Sensor Model Packaging]:
+OSMP is used as a template to package all models using OSI and FMI.
+
+## Webinars
+
+NOTE: Put webinars here?

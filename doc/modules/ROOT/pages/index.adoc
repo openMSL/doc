@@ -1,0 +1,17 @@
+= Introduction
+
+image::envited.png[envited,800]
+
+ENVITED stands for Environment for Virtual Test Drive encompassing all components for virtual test and validation of Advanced Driver Assistent Systems (ADAS) including but not limited to standardized data sets, e.g. digital maps, scenario data, simulation models and their respective test and validation methods.
+OpenMSL aims to connect and demonstrate the seamless interaction of projects in the domain using elaborate test pipelines, also to assure the compliance of all simulation entities with relevant standards.
+It also connects to projects outside of OpenMSL, you can find a list on the xref:related_work.adoc[Related Work] page.
+
+All repositories are organized in xref:sub-libraries.adoc[Sub-Libraries] and each sub-library (SL) represents the best practices in the automotive industry on how to use, create and apply standard compliant simulation data and models regarding a specific topic or application area guided by expert maintainers of the ENVITED community.
+
+As part of these best practices, OpenMSL provides unified test architectures for simulation components.
+For OSMP compliant simulation models, an xref:test-architecture:index.adoc[OSMP Test Architecture] is defined.
+The architecture is applied in the template repositories of the corresponding sub-libraries.
+
+Learn more about the ENVITED research cluster of the Automotive Solution Center for Simulation e.V, our governance rules, contribution guidelines and our code of conduct on the xref:organization:index.adoc[Organization] page.
+
+We are looking forward to welcome you as member of our community!

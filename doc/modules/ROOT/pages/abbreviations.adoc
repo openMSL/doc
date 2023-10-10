@@ -1,0 +1,62 @@
+= List of Abbreviations
+
+[cols="1,1,1"]
+|===
+|Abbreviation | Meaning | Short Description
+
+|ADS
+|https://www.sae.org/standards/content/j3016_202104/[Automated Driving System]
+|SAE J3016 Level 3 - 5
+
+|ASAM
+|https://www.asam.net/[Association for Standardization of Automation and Measuring Systems]
+|Standardization association for e.g. OpenDrive, OpenScenario, Open Simulation Interface etc.
+
+|ASCS
+|https://www.asc-s.de/[Automotive Solution Center for Simulation e.V.]
+|Non-profit association for know-how carriers in the field of automotive simulation
+
+|DAS
+|https://www.sae.org/standards/content/j3016_202104/[Driver Assistance System]
+|SAE J3016 Level 1 - 2
+
+|FMI
+|https://fmi-standard.org[Functional Mockup Interface]
+|Container and an interface standard to exchange simulation models
+
+|FMU
+|Functional Mockup Unit
+|Container within the FMI standard
+
+|glTF
+|https://github.com/KhronosGroup/glTF[GL Transmission Format]
+|3D model format
+
+|ODD
+|https://www.asam.net/index.php?eID=dumpFile&t=f&f=4544&token=1260ce1c4f0afdbe18261f7137c689b1d9c27576[Operational Design Domain]
+|Operating conditions under which a DAS thereof is specifically designed to function
+
+|OSI
+|https://github.com/OpenSimulationInterface[ASAM Open Simulation Interface]
+|Standardized interface to transport simulation data between models
+
+|OSMP
+|https://github.com/OpenSimulationInterface/osi-sensor-model-packaging[OSI Sensor Model Packaging]
+|Standard to package OSI-compliant FMUs
+
+|SPDX
+|https://spdx.dev/[Software Package Data Exchange]
+|Open standard, communicating name, version, components, licenses, copyrights etc. of a software
+
+|SRMD
+|https://pmsfit.github.io/SSPTraceability/master/#sec-srmdintroduction[Simulation Resource Meta Data]
+|Meta data format to be attached to every simulation entity
+
+|SSD
+|https://ssp-standard.org/publications/SSP10RC1/SystemStructureAndParameterization10RC1.pdf[System Structure Description]
+|File format to define a system consisting of one or more FMUs as part of the SSP standard
+
+|SSP
+|https://ssp-standard.org/[System Structure & Parameterization]
+|Standard to define complete systems consisting of one or more FMUs
+|===

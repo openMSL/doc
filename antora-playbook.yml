@@ -1,5 +1,5 @@
 site:
-  title: OpenMSL
+  title: ENVITED Open Source Model & Simulation Library
   url: https://openmsl.github.io/doc/
   start_page: OpenMSL::index.adoc 
 content:

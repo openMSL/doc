@@ -8,6 +8,9 @@ It also connects to projects outside of OpenMSL, you can find a list on the xref
 
 All repositories are organized in xref:sub-libraries.adoc[Sub-Libraries] and each sub-library (SL) represents the best practices in the automotive industry on how to use, create and apply standard compliant simulation data and models regarding a specific topic or application area guided by expert maintainers of the ENVITED community.
 
+The co-simulation ecosystem is compiled of various standards and tools containing different acronyms and abbreviations.
+You can find a xref:abbreviations.adoc[list of widely used abbreviations] in this documentation.
+
 As part of these best practices, OpenMSL provides unified test architectures for simulation components.
 For OSMP compliant simulation models, an xref:test-architecture:index.adoc[OSMP Test Architecture] is defined.
 The architecture is applied in the template repositories of the corresponding sub-libraries.

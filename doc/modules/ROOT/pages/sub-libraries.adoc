@@ -9,9 +9,9 @@ Initiated: 2022-07-25
 
 ### Maintainer
 
-- image:../images/avatar/LukasElster.png[LukasElster,30,30] https://github.com/LukasElster[Lukas Elster] (FZD TU Darmstadt)
-- image:../images/avatar/ClemensLinnhoff.png[ClemensLinnhoff,30,30] https://github.com/ClemensLinnhoff[Clemens Linnhoff] (Persival GmbH)
-- image:../images/avatar/JuergenWille.png[JuergenWille,30,30] https://github.com/FM-juergenW[Jürgen Wille] (FrontMod GmbH)
+- image:avatar/LukasElster.png[LukasElster,30,30] https://github.com/LukasElster[Lukas Elster] (FZD TU Darmstadt) +
+- image:avatar/ClemensLinnhoff.png[ClemensLinnhoff,30,30] https://github.com/ClemensLinnhoff[Clemens Linnhoff] (Persival GmbH) +
+- image:avatar/JuergenWille.png[JuergenWille,30,30] https://github.com/FM-juergenW[Jürgen Wille] (FrontMod GmbH)
 
 ### Repositories
 

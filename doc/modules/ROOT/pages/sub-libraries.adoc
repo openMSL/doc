@@ -9,10 +9,10 @@ Initiated: 2022-07-25
 
 ### Maintainer
 
-- https://github.com/LukasElster[Lukas Elster] (FZD TU Darmstadt)
-- https://github.com/ClemensLinnhoff[Clemens Linnhoff] (Persival GmbH)
-- https://github.com/FM-juergenW[Jürgen Wille] (FrontMod GmbH)
-  
+- image:../images/avatar/LukasElster.png[LukasElster,30,30] https://github.com/LukasElster[Lukas Elster] (FZD TU Darmstadt)
+- image:../images/avatar/ClemensLinnhoff.png[ClemensLinnhoff,30,30] https://github.com/ClemensLinnhoff[Clemens Linnhoff] (Persival GmbH)
+- image:../images/avatar/JuergenWille.png[JuergenWille,30,30] https://github.com/FM-juergenW[Jürgen Wille] (FrontMod GmbH)
+
 ### Repositories
 
 - https://github.com/openMSL/sl-1-0-sensor-model-repository-template[sl-1-0-sensor-model-repository-template]
@@ -32,7 +32,7 @@ Initiated: Call for participation. Get engaged mailto:hello@envited.market[hello
 - TBD
 - TBD
 - TBD
-  
+
 ### Repositories
 
 - https://github.com/openMSL/sl-2-0-traffic-participant-model-repository-template[sl-2-0-traffic-participant-model-repository-template]
@@ -49,7 +49,7 @@ Initiated: Call for participation. Get engaged mailto:hello@envited.market[hello
 - TBD (BMW AG)
 - TBD
 - TBD
-  
+
 ### Repositories
 
 - https://github.com/asam-oss/OSC-ALKS-scenarios[sl-3-1-osc-alks-scenarios]
@@ -66,7 +66,7 @@ Initiated: Call for participation. Get engaged mailto:hello@envited.market[hello
 - TBD (BMW AG)
 - TBD
 - TBD
-  
+
 ### Repositories
 
 - In discussion
@@ -82,7 +82,7 @@ Initiated: Call for participation. Get engaged mailto:hello@envited.market[hello
 - TBD (Persival GmbH)
 - TBD
 - TBD
-  
+
 ### Repositories
 
 - https://github.com/openMSL/sl-5-1-srmd-validator[sl-5-1-srmd-validator]

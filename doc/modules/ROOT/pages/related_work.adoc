@@ -42,4 +42,4 @@ OSMP is used as a template to package all models using OSI and FMI.
 
 ## Webinars
 
-NOTE: Will be updated shortly
+https://www.vector.com/int/en/events/global-de-en/webinar-recordings/28b10061cf1d19e4f426303172f5509b-openx-standards-for-scenario-based-testing/[OpenX Standards for Scenario-Based Testing] by Vector and Persival (29.11.2023)

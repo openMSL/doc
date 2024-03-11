@@ -2,7 +2,7 @@
 
 Credibility assessment level 1 contains multiple different tests for code quality.
 In the first test, linters are used to ensure general quality of code and documentation.
-In the example linked below, linters for C++ code, markdown files, and xml files such as SRMD and modelDescription are implemented.
+In the example linked below, linters for C&plus;&plus; code, markdown files, and xml files such as SRMD and modelDescription are implemented.
 Further linters have to be added, if additional programming languages are used.
 In the second test, the model is build using cmake.
 The third test category runs unit tests defined for the individual model.
@@ -15,9 +15,9 @@ These tests consist of linters checking the formatting against style guides for 
 
 ### C++ Linter
 
-C++ code is checked with clang according to the clang-format and clang-tidy files in the repository.
+C&plus;&plus; code is checked with clang according to the clang-format and clang-tidy files in the repository.
 It is mandatory for every code repository to provide these config files.
-As a best practice, https://github.com/eklitzke/clang-format-all[clang-format-all] can be used to automatically format all C++ files in the repository.
+As a best practice, https://github.com/eklitzke/clang-format-all[clang-format-all] can be used to automatically format all C&plus;&plus; files in the repository.
 Be aware, that formatting might break functionality, e.g. by a different order of includes.
 Be sure to check after formatting.
 

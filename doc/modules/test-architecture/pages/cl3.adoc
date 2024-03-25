@@ -15,7 +15,7 @@ All tests in CL 3 are considered behavior tests, since they all verify the imple
 Therefore, every test is located in an individual folder in _test/behavior_.
 The individual test folder SHALL follow the naming scheme "xxx_short_description", where xxx is a three digit consecutive number.
 The folder SHALL contain a https://ssp-standard.org/publications/SSP10RC1/SystemStructureAndParameterization10RC1.pdf[system structure definition file (.ssd)].
-In this file, the utilized model input (trace file player or esmini) as well as the https://github.com/Persival-GmbH/osi-sensordata-trace-file-writer[trace file writer] are specified.
+In this file, the utilized model input (trace file player or esmini) as well as the hhttps://github.com/openMSL/sl-5-6-osi-trace-file-writer[trace file writer] are specified.
 The test folder SHALL additionally contain a README.md file, which describes the test system, scenario and pass/fail criterion.
 This README.md SHALL follow the same https://github.com/openMSL/.github/blob/main/doc/integration_test_readme_template.md[template] as the integration tests.
 Other simulation artefacts such as the trace file or scenario to be played as well as the python analysis script are also to be placed in that test folder.

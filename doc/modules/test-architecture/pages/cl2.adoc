@@ -64,18 +64,27 @@ An example implementation of this test can be found in the https://github.com/op
 
 ## CL 2.2 Interface Tests
 
-In this test category, in addition to a trace file player or scenario engine, the model output is connected to an evaluation FMU.
+In this test category, in addition to a trace file player or scenario engine, the model output is connected to a trace file writer FMU.
 With this setup, the model output is tested against various criteria.
 
-### OSI Field Check
+### OSI Validation
 
-In this test, the model output is connected to the https://github.com/openMSL/sl-1-5-sensor-model-testing/tree/main/src/osi-field-checker[OSI Field Checker] FMU provided in this repository.
-It checks, if the OSI fields required for the model under test are filled in the model output.
-The required output fields are specified in a txt file, where every line is one OSI field.
-If a field is missing in the output, it will be shown as an annotation in the GitHub action.
-More detailed information about the OSI Field Checker can be found in the respective https://github.com/openMSL/sl-1-5-sensor-model-testing/tree/main/src/osi-field-checker#readme[Readme].
+In this test, the model output(s) is/are connected to the https://github.com/openMSL/sl-5-6-osi-trace-file-writer[OSI Trace File Writer] FMU provided in sub-library 5.
+If a model has multiple outputs, e.g. a TrafficUpdate and a TrafficCommandUpdate in case of a traffic participant model, multiple trace files are generated.
+The output trace files are passed as data input to the https://github.com/OpenSimulationInterface/osi-validation[osi-validation] tool. 
+Osi-validation checks OSI trace files against a defined set of rules.
 
-An example implementation of this test can be found in the https://github.com/openMSL/sl-1-0-sensor-model-repository-template/tree/main/test/integration/002_output_osi_fields[sensor model template repository].
+In a first test, the trace files are checked against the OSI default rules.
+These rules are generated automatically in the pipeline based on the rules defined in the .proto files of the OSI standard.
+This way, general standard compliance is validated.
+
+In a second test, the trace files are checked against custom rules. These custom rules can be defined for each model, separated by input and output.
+For the model output, rules according to the osi-validation documentation are to be places in a rules/output_rules folder.
+This for example enables using the is_set rule to test, whether output messages defined in the readme are actually set by the model.
+
+Not only the model output is tested. When a test contains an input trace file, it is also tested against the standard rules and a custom rule set defined in rules/input_rules.
+
+An example implementation of this test can be found in the https://github.com/openMSL/sl-2-0-traffic-participant-model-repository-template[traffic participant model template repository].
 
 ### Value Range Check
 
